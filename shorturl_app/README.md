@@ -9,7 +9,7 @@ uvicorn main:app --forwarded-allow-ips='*' --proxy-headers --log-level debug --r
 ```bash
 docker build -t urfu_study_short_url_prj .
 ```
-2. Запуска образа
+2. Запуск контейнера
 ```bash
 docker run -d -p 8001:80 -v shorturl_data:/app/data urfu_study_short_url_prj
 ```

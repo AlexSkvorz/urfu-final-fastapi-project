@@ -9,7 +9,7 @@ uvicorn main:app --forwarded-allow-ips='*' --proxy-headers --log-level debug --r
 ```bash
 docker build -t urfu_study_todo_prj .
 ```
-2. Запуска образа
+2. Запуск контейнера
 ```bash
 docker run -d -p 8000:80 -v todo_data:/app/data urfu_study_todo_prj
 ```
