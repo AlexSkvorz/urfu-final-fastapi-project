@@ -30,7 +30,7 @@ async def create_shorten_url(item: URLCreate) -> ShortURLSchema:
         existing = await CRUD.is_exist_url_short_id(short_id=short_id)
         if not existing:
             await CRUD.create_short_url(short_id=short_id, url=str(item.url))
-            return ShortURLSchema(short_url=f"http://localhost:8000/{short_id}")
+            return ShortURLSchema(short_url=f"http://localhost:8001/{short_id}")
     raise HTTPException(
         status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
         detail="Не удалось сгенерировать короткую ссылку"
